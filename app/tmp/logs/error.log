@@ -659,8 +659,11 @@
 #0 C:\wamp\www\utvecklarkollektivet\forum-utvecklarkollektivet\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> github/master
 =======
+=======
+>>>>>>> github/master
 2012-07-16 16:42:31 Error: Fatal Error (4): syntax error, unexpected T_ENCAPSED_AND_WHITESPACE, expecting ')' in [C:\wamp\www\utvecklarkollektivet\forum-utvecklarkollektivet\app\Model\Thread.php, line 15]
 2012-07-16 16:42:31 Error: [FatalErrorException] syntax error, unexpected T_ENCAPSED_AND_WHITESPACE, expecting ')'
 #0 C:\wamp\www\utvecklarkollektivet\forum-utvecklarkollektivet\lib\Cake\Error\ErrorHandler.php(162): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\utv...', 15)
@@ -680,4 +683,7 @@
 #3 C:\wamp\www\utvecklarkollektivet\forum-utvecklarkollektivet\lib\Cake\Core\App.php(899): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+<<<<<<< HEAD
+>>>>>>> github/master
+=======
 >>>>>>> github/master
