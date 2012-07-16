@@ -1,14 +1,2 @@
-app/tmp/cache/models/*
-!app/tmp/cache/models/empty
-app/tmp/cache/persistent/*
-!app/tmp/cache/persistent/empty
-app/tmp/cache/view/*
-!app/tmp/cache/empty
-app/tmp/logs/*
-!app/tmp/logs/empty
-app/tmp/sessions/*
-!app/tmp/sessions/empty
-app/tmp/tests/*
-!app/tmp/tests/empty
 app/Config/database.php
 app/Config/core.php
