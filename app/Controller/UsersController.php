@@ -29,7 +29,7 @@ class UsersController extends AppController {
      * login method
      */
     public function login() {
-        $this->layout = 'js';
+        $this->layout = 'login';
 
         if (!$this->request->is('post')) {
             return;
@@ -70,6 +70,8 @@ class UsersController extends AppController {
      * @return void
      */
 	public function add() {
+        $this->layout = 'login';
+
 		if ($this->request->is('post')) {
 			$this->User->create();
 			if ($this->User->save($this->request->data)) {
