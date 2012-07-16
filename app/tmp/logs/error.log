@@ -658,4 +658,26 @@
 2012-07-16 15:49:23 Error: [MissingControllerException] Controller class InlayController could not be found.
 #0 C:\wamp\www\utvecklarkollektivet\forum-utvecklarkollektivet\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+<<<<<<< HEAD
+>>>>>>> github/master
+=======
+2012-07-16 16:42:31 Error: Fatal Error (4): syntax error, unexpected T_ENCAPSED_AND_WHITESPACE, expecting ')' in [C:\wamp\www\utvecklarkollektivet\forum-utvecklarkollektivet\app\Model\Thread.php, line 15]
+2012-07-16 16:42:31 Error: [FatalErrorException] syntax error, unexpected T_ENCAPSED_AND_WHITESPACE, expecting ')'
+#0 C:\wamp\www\utvecklarkollektivet\forum-utvecklarkollektivet\lib\Cake\Error\ErrorHandler.php(162): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\utv...', 15)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\utv...', 15, Array)
+#2 C:\wamp\www\utvecklarkollektivet\forum-utvecklarkollektivet\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\utv...', 15, Array)
+#3 C:\wamp\www\utvecklarkollektivet\forum-utvecklarkollektivet\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-07-16 16:48:49 Error: [MissingControllerException] Controller class ThreadController could not be found.
+#0 C:\wamp\www\utvecklarkollektivet\forum-utvecklarkollektivet\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-07-16 16:49:18 Error: Fatal Error (1): Call to a member function save() on a non-object in [C:\wamp\www\utvecklarkollektivet\forum-utvecklarkollektivet\app\Controller\ThreadController.php, line 17]
+2012-07-16 16:49:18 Error: [FatalErrorException] Call to a member function save() on a non-object
+#0 C:\wamp\www\utvecklarkollektivet\forum-utvecklarkollektivet\lib\Cake\Error\ErrorHandler.php(162): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\utv...', 17)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\utv...', 17, Array)
+#2 C:\wamp\www\utvecklarkollektivet\forum-utvecklarkollektivet\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\utv...', 17, Array)
+#3 C:\wamp\www\utvecklarkollektivet\forum-utvecklarkollektivet\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
 >>>>>>> github/master

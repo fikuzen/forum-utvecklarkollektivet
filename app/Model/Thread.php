@@ -1,10 +1,24 @@
 <?php
+/**
+ * @author Utvecklarkollektivet
+ * Class for Threads
+ */
 class Thread extends AppModel {
 
+	public $name = 'Thread';
 	public $hasMany = 'inlay';
 	public $belongsTo = 'user';
-	// has many inlay
-	// has one user
+
+	public $validate = array(
+			'topic' => array(
+				'required' => true,
+				'allowEmpty' => false
+			),
+			'content' => array(
+				'required' => true,
+				'allowEmpty' => false
+			)
+	);
 
 
 }
