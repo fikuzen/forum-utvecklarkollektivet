@@ -29,7 +29,8 @@ class UsersController extends AppController {
      * login method
      */
     public function login() {
-       
+        $this->layout = 'js';
+
         if (!$this->request->is('post')) {
             return;
         }
