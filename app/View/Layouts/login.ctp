@@ -3,7 +3,6 @@
 <head>
 	<?php echo $this->Html->charset(); ?>
 	<title>
-		<?php echo $cakeDescription ?>:
 		<?php echo $title_for_layout; ?>
 	</title>
 	<?php
@@ -20,8 +19,10 @@
 <div id="topborder"></div>
     <center>
         <?php echo $this->fetch('content'); ?>
-    <div id="footer">										<!-- ... Footer ... -->
-    © Copyright, 2012 <a href="#">forum-utvecklarkollektivet</a><br /> OBS, denna sidan använder cookies. För att veta mer om cookies tryck <a href="#">här</a>
+    <div id="footer">
+        © Copyright, 2012 <a href="#">forum-utvecklarkollektivet</a><br />
+        OBS, denna sidan använder cookies. För att veta mer om cookies tryck
+        <a href="#">här</a>
     </div>
 	</center>
 </body>

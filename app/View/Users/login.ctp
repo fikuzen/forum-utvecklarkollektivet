@@ -15,9 +15,10 @@ $this->end();
 	<center>
     <?php
         echo $this->Form->create('User', array('url' => array('controller' => 'users', 'action' => 'login')));
-        echo $this->Form->input('User.username', array('class' => 'inputtext'));
-        echo $this->Form->input('User.password', array('class' => 'inputpassword'));
-        echo $this->Form->end('Logga in');
+        echo $this->Form->input('User.username', array('label' => false, 'class' => 'inputtext'));
+        echo $this->Form->input('User.password', array('label' => false, 'class' => 'inputpassword'));
+        echo $this->Form->submit('Logga in', array('class' => 'submitbutton'));
+        echo $this->Form->end();
     ?>
     </center>
 </div>
