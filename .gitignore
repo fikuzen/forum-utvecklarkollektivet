@@ -11,3 +11,4 @@ app/tmp/sessions/*
 app/tmp/tests/*
 !app/tmp/tests/empty
 app/Config/database.php
+app/Config/core.php
