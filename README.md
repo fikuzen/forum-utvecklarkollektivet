@@ -32,3 +32,8 @@ och
 Om du vill göra om alla befintliga tabbar till spaces, skriv
     :retab
 
+Ställ om tabbar i Notepad++
+---------------------------
+Inställningar > Inställningar > Programspråksmeny
+
+I nedre höger kant finns det en checkbox "Ersätt med mellanslag", kryssa i den. Ovanför kan du också välja "Flikstorlek" (hur många mellanslag på en tab), välj 4.
