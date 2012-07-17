@@ -21,6 +21,12 @@ class User extends AppModel {
      * @var array
      */
     public $belongsTo = array('Group');
+    
+    /**
+     * User hasMany Threads and Posts
+     * @var array
+     */
+    public $hasMany = array('Thread', 'Post');
 
     /**
      * Acts as requester in Acl
