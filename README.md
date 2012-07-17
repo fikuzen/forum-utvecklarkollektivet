@@ -1,4 +1,4 @@
-# Utvecklarkollektivets f�rsta projekt!
+# Utvecklarkollektivets första projekt!
 
 Mer info kommer.
 

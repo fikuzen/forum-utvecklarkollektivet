@@ -9,6 +9,7 @@
 		echo $this->Html->meta('icon');
 
 		echo $this->Html->css('generic');
+        echo $this->Html->css('login');
 
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
@@ -18,12 +19,22 @@
 <body>
 <div id="topborder"></div>
     <center>
-        <?php echo $this->fetch('content'); ?>
-    <div id="footer">
-        © Copyright, 2012 <a href="#">forum-utvecklarkollektivet</a><br />
-        OBS, denna sidan använder cookies. För att veta mer om cookies tryck
-        <a href="#">här</a>
-    </div>
+        <div id="container">
+            <div id="container_text">
+                <h1>Välkommen till forum-utvecklarkollektivet</h1>
+                <h6>Detta är ett stängt community, det innebär att enbart medlemmar har tillgång till innehållet på websidan.</h6>
+            </div>
+            <center>
+
+                <?php echo $this->fetch('content'); ?>
+            </center>
+        </div>
+
+        <div id="footer">
+            © Copyright, 2012 <a href="#">forum-utvecklarkollektivet</a><br />
+            OBS, denna sidan använder cookies. För att veta mer om cookies tryck
+            <a href="#">här</a>
+        </div>
 	</center>
 </body>
 </html>
