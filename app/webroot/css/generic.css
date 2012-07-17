@@ -157,6 +157,8 @@ a:active  {color:#1d7ebf;}
 .submitbutton
 {
     background-color: #d14545;
+	float:right;
+	margin-right:155px;
     background-image: -webkit-gradient(linear, left top, left bottom, from(#e97171), to(#d14545));
     background-image: -webkit-linear-gradient(top, #e97171, #d14545);
     background-image: -moz-linear-gradient(top, #e97171, #d14545);
@@ -183,6 +185,8 @@ a:active  {color:#1d7ebf;}
 .clear
 {
     background-color:#A8A8A8;
+	float:left;
+	margin-left:290px;
     background-image: -webkit-gradient(linear, left top, left bottom, from(#999), to(#666));
     background-image: -webkit-linear-gradient(top, #999, #666);
     background-image: -moz-linear-gradient(top, #999, #666);
