@@ -35,7 +35,6 @@ h6 {
 #login_container { 
     background:#f5f5f5; 
     width:650px; 
-    height:300px; 
     margin-top:3%; 
     text-align:left;
     -webkit-border-radius: 10px 10px 10px 10px;
@@ -45,6 +44,7 @@ h6 {
     -webkit-box-shadow: 0px 0px 10px rgba(50, 50, 50, 0.3);
     -moz-box-shadow:    0px 0px 10px rgba(50, 50, 50, 0.3);
     box-shadow:         0px 0px 10px rgba(50, 50, 50, 0.3);
+    padding-bottom: 20px;
 }
 
 #login_container_text {
@@ -54,16 +54,21 @@ h6 {
 
 
 
-.login_usr_icon
-{
-    background-image:url(/img/user.png);
+.login_usr_icon {
+    background-image:url(/img/user-icon.png);
     background-position:5px center;
     background-repeat:no-repeat;
     padding-left:30px !important;
 }
 
-.login_pwd_icon
-{
+.login_pwd_icon {
+    background-image:url(/img/key-icon.png);
+    background-position:5px center;
+    background-repeat:no-repeat;
+    padding-left:30px !important;
+}
+
+.login_act_icon {
     background-image:url(/img/lock-icon.png);
     background-position:5px center;
     background-repeat:no-repeat;
@@ -83,8 +88,7 @@ h6 {
     margin-bottom:5px;
 }
 
-.login_submit
-{
+.login_submit {
     background-color: #d14545;
     float:right;
     margin-right:155px;
@@ -97,8 +101,7 @@ h6 {
 }
 
 
-.login_forgot_pass
-{
+.login_forgot_pass {
     background-color:#A8A8A8;
     float:left;
     margin-left:290px;

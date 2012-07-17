@@ -40,23 +40,20 @@ class User extends AppModel {
      *
      * @var array
      */
-	public $validate = array(
-		'username' => array(
-			'notempty' => array(
-				'rule' => array('notempty')
-			),
-		),
-		'password' => array(
-			'notempty' => array(
-				'rule' => array('notempty')
-			),
-		),
-		'group_id' => array(
-			'numeric' => array(
-				'rule' => array('numeric')
-			),
-		),
-	);
+    public $validate = array(
+        'username' => array(
+            'notempty' => array(
+                'rule' => array('notempty'),
+                'message' => 'Du måste ange ett användarnamn...'
+            ),
+        ),
+        'password' => array(
+            'notempty' => array(
+                'rule' => array('notempty'),
+                'message' => 'Du måste ange ett lösenord...'
+            ),
+        )
+    );
 
 
     /**
@@ -70,6 +67,21 @@ class User extends AppModel {
             return true;
     }
 
+    /**
+     * Check if the username is available
+     *
+     * @param string $username
+     * @return boolean
+     */
+    public function isAvailable($username) {
+        $count = $this->find(
+            'count', 
+            array(
+                'conditions' => array('User.username' => $username)
+            )
+        );
+        return ($count == 0);
+    }
 
     /**
      * Return the parent Acl-node.

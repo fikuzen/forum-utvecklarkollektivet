@@ -19,6 +19,13 @@
 <body>
 <div id="topborder"></div>
     <center>
+        
+        <?php if ($this->Session->check('Message.flash')) { ?>
+        <div>
+            <?php echo $this->Session->flash(); ?>
+        </div>
+        <?php } ?>
+
         <div id="login_container">
             <div id="login_container_text">
                 <h1>Välkommen till forum-utvecklarkollektivet</h1>
@@ -28,6 +35,7 @@
 
                 <?php echo $this->fetch('content'); ?>
             </center>
+            <div style="clear: both;"></div>
         </div>
 
         <div id="footer">
