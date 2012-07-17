@@ -48,6 +48,7 @@ class ThreadController extends AppController {
      */
     public function write() {
         if ($this->request->is('post')) {
+            $this->Thread->set('user_id', $this->Auth->user('id'));
             if ($this->Thread->save($this->request->data)) {
                 $this->Session->setFlash('Your post has been saved.');
                 $this->redirect(array('action' => 'index'));
