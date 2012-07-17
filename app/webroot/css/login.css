@@ -1,0 +1,128 @@
+@charset "UTF-8";
+/* Utvecklarkollektivet */
+
+
+/*#userControls
+{
+    background-color:transparent;
+    height: 300px;
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family:arial;
+    padding: 10px, 10px, 10px, 10px;    
+}*/
+
+
+h1 {
+    font-family:georgia;
+    font-size:30px;
+    text-align:center;
+    font-style:italic;
+    font-weight:200;
+}
+
+h6 {
+    font-family:tahoma;
+    font-size:11px;
+    text-align:center;
+    color:#666;
+    margin-top:-10px;
+    font-weight:100;
+}
+
+
+#login_container { 
+    background:#f5f5f5; 
+    width:650px; 
+    height:300px; 
+    margin-top:3%; 
+    text-align:left;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    -moz-border-radius:    5px 5px 5px 5px;
+    -khtml-border-radius:  5px 5px 5px 5px;
+    border-radius:         5px 5px 5px 5px; 
+    -webkit-box-shadow: 0px 0px 10px rgba(50, 50, 50, 0.3);
+    -moz-box-shadow:    0px 0px 10px rgba(50, 50, 50, 0.3);
+    box-shadow:         0px 0px 10px rgba(50, 50, 50, 0.3);
+}
+
+#login_container_text {
+    padding: 10px;
+    font-family:georgia;
+}
+
+
+
+.login_usr_icon
+{
+    background-image:url(/img/user.png);
+    background-position:5px center;
+    background-repeat:no-repeat;
+    padding-left:30px !important;
+}
+
+.login_pwd_icon
+{
+    background-image:url(/img/lock-icon.png);
+    background-position:5px center;
+    background-repeat:no-repeat;
+    padding-left:30px !important;
+}
+
+.login_field {
+    -moz-border-radius:4px;
+    -webkit-border-radius:4px;
+    width:300px;
+    padding:10px;
+    border:#bfbfbf solid thin;
+    -webkit-border-radius: 4px 4px 4px 4px;
+    -moz-border-radius: 4px 4px 4px 4px;
+    -khtml-border-radius: 4px 4px 4px 4px;
+    border-radius: 4px 4px 4px 4px; 
+    margin-bottom:5px;
+}
+
+.login_submit
+{
+    background-color: #d14545;
+    float:right;
+    margin-right:155px;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#e97171), to(#d14545));
+    background-image: -webkit-linear-gradient(top, #e97171, #d14545);
+    background-image: -moz-linear-gradient(top, #e97171, #d14545);
+    background-image: -ms-linear-gradient(top, #e97171, #d14545);
+    background-image: -o-linear-gradient(top, #e97171, #d14545);
+    background-image: linear-gradient(top, #e97171, #d14545);
+}
+
+
+.login_forgot_pass
+{
+    background-color:#A8A8A8;
+    float:left;
+    margin-left:290px;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#999), to(#666));
+    background-image: -webkit-linear-gradient(top, #999, #666);
+    background-image: -moz-linear-gradient(top, #999, #666);
+    background-image: -ms-linear-gradient(top, #999, #666);
+    background-image: -o-linear-gradient(top, #999, #666);
+    background-image: linear-gradient(top, #999, #666);
+}
+    
+.login_button {
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    text-shadow: 0 1px 0 rgba(0,0,0,.5);
+    -moz-box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.3) inset;
+    -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.3) inset;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.3) inset;    
+    border: 1px solid #666;
+    padding: 5px 15px;
+    cursor: pointer;
+    font-family: Georgia,"Nimbus Roman No9 L",serif;
+    color: #fff;
+    font-size:12px;
+    font-style: italic;
+}

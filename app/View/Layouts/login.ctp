@@ -19,8 +19,8 @@
 <body>
 <div id="topborder"></div>
     <center>
-        <div id="container">
-            <div id="container_text">
+        <div id="login_container">
+            <div id="login_container_text">
                 <h1>Välkommen till forum-utvecklarkollektivet</h1>
                 <h6>Detta är ett stängt community, det innebär att enbart medlemmar har tillgång till innehållet på websidan.</h6>
             </div>
