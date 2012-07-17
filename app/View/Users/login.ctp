@@ -12,7 +12,7 @@ echo $this->Form->input(
     array(
         'label' => false, 
         'class' => 'login_usr_icon login_field', 
-        'placeholder' => 'Användarnamn...'
+        'placeholder' => 'Användarnamn'
     )
 );
 echo $this->Form->input(
@@ -20,7 +20,7 @@ echo $this->Form->input(
     array(
         'label' => false, 
         'class' => 'login_pwd_icon login_field', 
-        'placeholder' => 'Lösenord...'
+        'placeholder' => 'Lösenord'
     )
 );
 echo $this->Form->button(
