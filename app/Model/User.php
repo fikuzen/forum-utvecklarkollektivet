@@ -46,6 +46,10 @@ class User extends AppModel {
                 'rule' => array('notempty'),
                 'message' => 'Du måste ange ett användarnamn...'
             ),
+            'unique' => array(
+                'rule' => 'isUnique',
+                'message' => 'Användarnamnet är upptaget...'
+            )
         ),
         'password' => array(
             'notempty' => array(
@@ -65,22 +69,6 @@ class User extends AppModel {
         $this->data['User']['password'] =
             AuthComponent::password($this->data['User']['password']);
             return true;
-    }
-
-    /**
-     * Check if the username is available
-     *
-     * @param string $username
-     * @return boolean
-     */
-    public function isAvailable($username) {
-        $count = $this->find(
-            'count', 
-            array(
-                'conditions' => array('User.username' => $username)
-            )
-        );
-        return ($count == 0);
     }
 
     /**

@@ -1,20 +1,31 @@
-<div class="registerKeys form">
 <?php echo $this->Form->create('RegisterKey'); ?>
-	<fieldset>
-		<legend><?php echo __('Add Register Key'); ?></legend>
 	<?php
-		echo $this->Form->input('user_id');
-		echo $this->Form->input('comment');
-		echo $this->Form->input('key');
-		echo $this->Form->input('group_id');
+		echo $this->Form->input(
+            'comment',
+            array(
+                'label' => false,
+                'error' => false,
+                'placeholder' => '(Frivillig) Kommentar...'
+            )
+        );
+		echo $this->Form->input(
+            'group_id', 
+            array(
+                'label' => false,
+                'error' => false,
+                'options' => $groups, 
+                'empty' => 'Välj en grupp...'
+            )
+        );
 	?>
-	</fieldset>
-<?php echo $this->Form->end(__('Submit')); ?>
-</div>
-<div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
-	<ul>
-
-		<li><?php echo $this->Html->link(__('List Register Keys'), array('action' => 'index')); ?></li>
-	</ul>
-</div>
+<?php echo $this->Form->end('Skapa'); ?>
+<?php
+if (!empty($validationErrors)) {
+?>
+    <div class="clear_both"></div>
+    <div class="error_message">
+        Du måste välja en giltig grupp för användaren...
+    </div>
+<?php
+}
+?>

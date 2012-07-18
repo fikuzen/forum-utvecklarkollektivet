@@ -38,14 +38,20 @@ class RegisterKeysController extends AppController {
      * @return void
      */
     public function add() {
+        $this->layout = 'login';
+
+        $this->loadModel('Group');
+        $this->set('groups', $this->Group->find('list'));
+
         if ($this->request->is('post')) {
             $this->RegisterKey->create();
+            $this->request->data['RegisterKey']['key'] = $this->RegisterKey->generateKey();
+            $this->request->data['RegisterKey']['user_id'] = $this->Auth->User('id');
             if ($this->RegisterKey->save($this->request->data)) {
                 $this->Session->setFlash(__('The register key has been saved'));
                 $this->redirect(array('action' => 'index'));
-            } else {
-                $this->Session->setFlash(__('The register key could not be saved. Please, try again.'));
             }
+            $this->set('validationErrors', $this->RegisterKey->validationErrors);
         }
     }
 

@@ -44,8 +44,10 @@ class UsersController extends AppController {
             $this->redirect($this->Auth->redirect());
         }
         else {
-            $this->Session->setFlash('Fel lösenord eller användarnamn.'); 
+            $this->User->invalidate('User.password', 'Fel användarnamn eller lösenord...'); 
         }
+
+        $this->set('validationErrors', $this->User->validationErrors);
     }
 
     /**
@@ -91,18 +93,12 @@ class UsersController extends AppController {
         if (!$this->RegisterKey->isValid($key)) {
             $this->User->invalidate(
                 'User.activation',
-                'Aktivationskoden var inte giltig...'
-            );
-        } elseif (!$this->User->isAvailable($this->data['User']['username'])) {
-            $this->User->invalidate(
-                'User.username',
-                'Användarnamnet är upptaget...'
+                'Aktivationskoden är inte giltig...'
             );
         } else {
             $this->User->create();
             $this->request->data['User']['group_id'] = 
                 $this->RegisterKey->getGroup($key);
-
             if ($this->User->save($this->request->data)) {
                 $this->RegisterKey->useKey($key);
                 $this->redirect(array('action' => 'index'));

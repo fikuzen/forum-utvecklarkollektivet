@@ -42,13 +42,20 @@ echo $this->Form->end();
 
 if (!empty($validationErrors)) {
 ?>
-    <div style="clear: both; height: 10px;"></div>
-        <?php
-        foreach($validationErrors as $field => $errors) {
-            echo $errors[0] . '<br />';
-        }
-        ?>
-    </div>
+    <div class="clear_both"></div>
+    <?php
+    foreach($validationErrors as $field => $errors) {
+    ?>
+        <div class="error_message">
+            <?php echo $errors[0]; ?>
+        </div>
+    <?php
+    }
+    ?>
 <?php
 }
 ?>
+<div style="clear: both; height: 10px;"></div>
+<span style="font-size: 10px; color: #666666;">
+    Har du redan ett konto? <a href="/users/login/">Logga in här</a>.
+</span>
