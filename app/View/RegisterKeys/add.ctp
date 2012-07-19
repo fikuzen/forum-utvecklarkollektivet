@@ -1,3 +1,4 @@
+<h1>Skapa registreringsnyckel</h1>
 <?php echo $this->Form->create('RegisterKey'); ?>
 	<?php
 		echo $this->Form->input(

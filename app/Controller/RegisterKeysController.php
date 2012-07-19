@@ -38,8 +38,6 @@ class RegisterKeysController extends AppController {
      * @return void
      */
     public function add() {
-        $this->layout = 'login';
-
         $this->loadModel('Group');
         $this->set('groups', $this->Group->find('list'));
 
