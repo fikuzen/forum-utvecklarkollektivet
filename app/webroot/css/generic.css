@@ -75,11 +75,66 @@ button {
     padding-bottom: 15px;width:100%;
 }
 
+#menu { 
+    background:#1d7ebf; 
+    width:940px !important; 
+    padding: 5px 10px;
+    margin-top: 50px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    -moz-border-radius:    5px 5px 5px 5px;
+    -khtml-border-radius:  5px 5px 5px 5px;
+    border-radius:         5px 5px 5px 5px; 
+    -webkit-box-shadow: 0px 0px 10px rgba(50, 50, 50, 0.3);
+    -moz-box-shadow:    0px 0px 10px rgba(50, 50, 50, 0.3);
+    box-shadow:         0px 0px 10px rgba(50, 50, 50, 0.3);
+}
+
+#menu a {
+    color: #000000; 
+    text-decoration: none; 
+    font-size: 14px;
+    font-family: Arial;
+    padding: 10px;
+    display: block;
+}
+
+#menu ul li ul li a:hover {
+    background: #DDD;
+}
+
+#menu ul {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+#menu ul li {
+    margin: 0px;
+    float: left;
+    list-style: none
+}
+
+#menu ul li h1 {
+    font-size: 14px;
+    margin: 0px;
+    padding: 0px;
+}
+
+#menu ul li ul {
+    display: none;
+    position: absolute;
+    background: #CCC;
+}
+
+#menu ul li ul li {
+    float: none;
+}
+
 #container { 
     background:#f5f5f5; 
     width:960px; 
     padding-bottom: 10px;
-    margin-top: 50px;
+    margin-top: 20px;
     -webkit-border-radius: 10px 10px 10px 10px;
     -moz-border-radius:    5px 5px 5px 5px;
     -khtml-border-radius:  5px 5px 5px 5px;
