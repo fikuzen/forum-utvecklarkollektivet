@@ -1,52 +1,36 @@
-<div class="users index">
-	<h2><?php echo __('Users'); ?></h2>
-	<table cellpadding="0" cellspacing="0">
-	<tr>
-			<th><?php echo $this->Paginator->sort('id'); ?></th>
-			<th><?php echo $this->Paginator->sort('username'); ?></th>
-			<th><?php echo $this->Paginator->sort('password'); ?></th>
-			<th><?php echo $this->Paginator->sort('group_id'); ?></th>
-			<th><?php echo $this->Paginator->sort('created'); ?></th>
-			<th class="actions"><?php echo __('Actions'); ?></th>
-	</tr>
-	<?php
-	foreach ($users as $user): ?>
-	<tr>
-		<td><?php echo h($user['User']['id']); ?>&nbsp;</td>
-		<td><?php echo h($user['User']['username']); ?>&nbsp;</td>
-		<td><?php echo h($user['User']['password']); ?>&nbsp;</td>
-		<td>
-			<?php echo $this->Html->link($user['Group']['name'], array('controller' => 'groups', 'action' => 'view', $user['Group']['id'])); ?>
-		</td>
-		<td><?php echo h($user['User']['created']); ?>&nbsp;</td>
-		<td class="actions">
-			<?php echo $this->Html->link(__('View'), array('action' => 'view', $user['User']['id'])); ?>
-			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $user['User']['id'])); ?>
-			<?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $user['User']['id']), null, __('Are you sure you want to delete # %s?', $user['User']['id'])); ?>
-		</td>
-	</tr>
-<?php endforeach; ?>
-	</table>
-	<p>
-	<?php
-	echo $this->Paginator->counter(array(
-	'format' => __('Page {:page} of {:pages}, showing {:current} records out of {:count} total, starting on record {:start}, ending on {:end}')
-	));
-	?>	</p>
+<h1 class="grid_12">Användare</h1>
+<div class="clear"></div>
 
-	<div class="paging">
-	<?php
-		echo $this->Paginator->prev('< ' . __('previous'), array(), null, array('class' => 'prev disabled'));
-		echo $this->Paginator->numbers(array('separator' => ''));
-		echo $this->Paginator->next(__('next') . ' >', array(), null, array('class' => 'next disabled'));
-	?>
-	</div>
+<div style="background-color: #EEE; padding: 2px 0px; margin-bottom: 3px;">
+    <div class="grid_1"><?php echo $this->Paginator->sort('id'); ?></div>
+    <div class="grid_3"><?php echo $this->Paginator->sort('username', 'Användarnamn'); ?></div>
+    <div class="grid_3"><?php echo $this->Paginator->sort('group_id', 'Grupp'); ?></div>
+    <div class="grid_3"><?php echo $this->Paginator->sort('created', 'Skapad'); ?></div>
+    <div class="grid_2">Åtgärder</div>
+    <div class="clear"></div>
 </div>
-<div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
-	<ul>
-		<li><?php echo $this->Html->link(__('New User'), array('action' => 'add')); ?></li>
-		<li><?php echo $this->Html->link(__('List Groups'), array('controller' => 'groups', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Group'), array('controller' => 'groups', 'action' => 'add')); ?> </li>
-	</ul>
+
+<?php
+foreach ($users as $user): ?>
+    <div class="grid_1"><?php echo $user['User']['id']; ?>&nbsp;</div>
+    <div class="grid_3">
+        <?php echo $this->Html->link($user['User']['username'], array('action' => 'view', $user['User']['id'])); ?>
+    </div>
+    <div class="grid_3">
+        <?php echo $this->Html->link($user['Group']['name'], array('controller' => 'groups', 'action' => 'view', $user['Group']['id'])); ?>
+    </div>
+    <div class="grid_3"><?php echo h($user['User']['created']); ?>&nbsp;</div>
+    <div class="grid_2">
+        <?php echo $this->Html->link('Editera', array('action' => 'edit', $user['User']['id'])); ?>
+        <?php echo $this->Form->postLink('Radera', array('action' => 'delete', $user['User']['id']), null, __('Säker på att du vill radera # %s?', $user['User']['id'])); ?>
+    </div>
+    <div class="clear"></div>
+<?php endforeach; ?>
+
+<div class="grid_12" style="text-align: center; margin-top: 10px;">
+<?php
+    echo $this->Paginator->prev('< Föregående', array(), null, array('class' => 'prev disabled')) . ' ';
+    echo $this->Paginator->numbers(array('separator' => ' ')) . ' ';
+    echo $this->Paginator->next('Nästa >', array(), null, array('class' => 'next disabled'));
+?>
 </div>

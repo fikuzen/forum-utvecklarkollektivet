@@ -57,10 +57,8 @@
 </div>
 
 <div id="container" class="container_12">
-    <div class="grid_6">
-            <?php echo $this->fetch('content'); ?>
-            <div style="clear: both;"></div>
-    </div>
+    <?php echo $this->fetch('content'); ?>
+    <div class="clear"></div>
 </div>
 <div>
     <div id="footer">
@@ -68,6 +66,5 @@
         OBS, denna sidan använder cookies. För att veta mer om cookies tryck
     <a href="#">här</a>
 </div>
-
 </body>
 </html>

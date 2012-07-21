@@ -10,6 +10,24 @@ h1 {
     font-family: Arial;
     font-size: 30px;
     font-weight: normal;
+    padding: 0px;
+    margin: 10px 0px 5px;
+}
+
+h2 {
+    font-family: Arial;
+    font-size: 24px;
+    font-weight: normal;
+    padding: 0px;
+    margin: 8px 0px 3px;
+}
+
+h3 {
+    font-family: Arial;
+    font-size: 18px;
+    font-weight: normal;
+    padding: 0px;
+    margin: 5px 0px 2px;
 }
 
 a:link    {color:#1d7ebf; text-decoration:underline;}
@@ -63,7 +81,7 @@ button {
 .error_message {
     background: #FFCCCC;
     padding: 5px;
-    margin: 10px;
+    margin: 10px 0px;
     -webkit-border-radius: 10px 10px 10px 10px;
     -moz-border-radius:    5px 5px 5px 5px;
     -khtml-border-radius:  5px 5px 5px 5px;

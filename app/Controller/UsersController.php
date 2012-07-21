@@ -8,6 +8,21 @@ App::uses('AppController', 'Controller');
 class UsersController extends AppController {
 
     /**
+     * Default pagination settings
+     */
+    public $paginate = array(
+        'fields' => array(
+            'User.id', 
+            'User.username', 
+            'User.created', 
+            'Group.name', 
+            'Group.id'
+        ),
+        'limit' => 25,
+        'User.username' => 'desc'
+    );
+
+    /**
      * This function is called before any thing else
      *
      * TIP: Uncomment $this->Auth->allow('add'); and go to /users/add to create a first user
@@ -23,7 +38,7 @@ class UsersController extends AppController {
      */
     public function index() {
         $this->User->recursive = 0;
-        $this->set('users', $this->paginate());
+        $this->set('users', $this->paginate('User'));
     }
 
     /**
@@ -127,7 +142,11 @@ class UsersController extends AppController {
                 $this->Session->setFlash(__('The user could not be saved. Please, try again.'));
             }
         } else {
-            $this->request->data = $this->User->read(null, $id);
+            $this->User->recursive = 0;
+            $this->request->data = $this->User->read(
+                array('User.username', 'Group.name'), 
+                $id
+            );
         }
         $groups = $this->User->Group->find('list');
         $this->set(compact('groups'));

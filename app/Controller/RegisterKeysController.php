@@ -8,6 +8,19 @@ App::uses('AppController', 'Controller');
 class RegisterKeysController extends AppController {
 
     /**
+     * Paginator default settings
+     */
+    public $paginate = array(
+        'fields' => array(
+            'RegisterKey.id',
+            'User.username',
+            'RegisterKey.comment',
+            'RegisterKey.key',
+            'Group.name'
+        )        
+    );
+
+    /**
      * index method
      *
      * @return void

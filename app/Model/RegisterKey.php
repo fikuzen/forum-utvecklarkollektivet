@@ -42,7 +42,7 @@ class RegisterKey extends AppModel {
         ),
     );
 
-    public $belongsTo = array('Group');
+    public $belongsTo = array('Group', 'User');
 
     /**
      * Check if the key is valid.
