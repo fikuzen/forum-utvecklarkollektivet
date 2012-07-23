@@ -80,7 +80,7 @@ class RegisterKey extends AppModel {
             'first', 
             array(
                 'fields' => 'RegisterKey.group_id',
-                'conditions' => 'RegisterKey.group_id'
+                'conditions' => array('RegisterKey.key' => $key)
             )
         );
         return $result['RegisterKey']['group_id'];
