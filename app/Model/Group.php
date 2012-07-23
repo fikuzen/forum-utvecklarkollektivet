@@ -27,9 +27,14 @@ class Group extends AppModel {
 	public $validate = array(
 		'name' => array(
 			'notempty' => array(
-				'rule' => array('notempty')
+				'rule' => array('notempty'),
+                'message' => 'Gruppen måste ha ett namn...'
 			),
-		),
+            'chars' => array(
+                'rule' => '/^([1-9 _a-zåäö]+)$/i',
+                'message' => 'Gruppens namn innehåller felaktiga tecken...'
+            )
+	    )	
 	);
 
     /**

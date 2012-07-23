@@ -35,6 +35,16 @@ a:visited {color:#1d7ebf;}
 a:hover   {color:#1d7ebf; text-decoration:none;}
 a:active  {color:#1d7ebf;}
 
+input[type=text] {
+    width: 289px;
+    padding: 2px 3px;
+}
+
+textarea {
+    width: 289px;
+    padding: 3px 3px;
+}
+
 input[type=submit], button {
     margin: 3px 0px;
     border: 1px solid #666;
@@ -74,6 +84,10 @@ button {
     background-image: linear-gradient(top, #999, #666);
 }
 
+table td {
+    padding: 3px 3px 0px 0px
+}
+
 .clear_both {
     clear: both;
 }
@@ -94,6 +108,7 @@ button {
 }
 
 #menu { 
+    z-index: 100;
     background:#1d7ebf; 
     width:940px !important; 
     padding: 5px 10px;
@@ -139,6 +154,7 @@ button {
 }
 
 #menu ul li ul {
+    z-index: 100;
     display: none;
     position: absolute;
     background: #CCC;

@@ -1,21 +1,44 @@
-<div class="groups form">
-<?php echo $this->Form->create('Group'); ?>
-	<fieldset>
-		<legend><?php echo __('Edit Group'); ?></legend>
-	<?php
-		echo $this->Form->input('id');
-		echo $this->Form->input('name');
-	?>
-	</fieldset>
-<?php echo $this->Form->end(__('Submit')); ?>
-</div>
-<div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
-	<ul>
+<h1 class="grid_12">Editera grupp: <?php echo $this->data['Group']['name']; ?></h1>
+<div class="clear"></div>
 
-		<li><?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $this->Form->value('Group.id')), null, __('Are you sure you want to delete # %s?', $this->Form->value('Group.id'))); ?></li>
-		<li><?php echo $this->Html->link(__('List Groups'), array('action' => 'index')); ?></li>
-		<li><?php echo $this->Html->link(__('List Users'), array('controller' => 'users', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New User'), array('controller' => 'users', 'action' => 'add')); ?> </li>
-	</ul>
+<?php echo $this->Form->create('Group'); ?>
+
+    <div class="grid_12">
+        <h3>Generella inställningar</h3>
+        <?php
+            echo $this->Form->input('name', array('label' => false, 'error' => false, 'placeholder' => 'Gruppnamn...'));
+        ?>
+    </div>
+    <div class="clear"></div>
+
+    <div class="grid_12">
+        <h3>Rättigheter</h3>
+        @todo!
+    </div>
+    <div class="clear"></div>
+
+    <div class="grid_5">
+        <?php echo $this->Form->button('Tillbaka', array('type' => 'button', 'onclick' => 'history.go(-1);')); ?>
+        <?php echo $this->Form->submit('Spara ändringar', array('div' => false)); ?>
+    </div>
+<?php echo $this->Form->end(); ?>
+
+<div class="clear"></div>
+<div class="grid_4">
+    <?php
+    if (!empty($validationErrors)) {
+    ?>
+        <div class="clear_both"></div>
+        <?php
+        foreach($validationErrors as $field => $errors) {
+        ?>
+            <div class="error_message">
+                <?php echo $errors[0]; ?>
+            </div>
+        <?php
+        }
+        ?>
+    <?php
+    }
+    ?>
 </div>
