@@ -71,7 +71,23 @@ input[type=submit] {
     background-image: -ms-linear-gradient(top, #e97171, #d14545);
     background-image: -o-linear-gradient(top, #e97171, #d14545);
     background-image: linear-gradient(top, #e97171, #d14545);
-    
+}
+
+input[type=submit]:hover {
+    background-color: rgb(209,90,90);
+    background-image: linear-gradient(bottom, rgb(235,146,146) 100%, rgb(209,90,90) 0%);
+    background-image: -o-linear-gradient(bottom, rgb(235,146,146) 100%, rgb(209,90,90) 0%);
+    background-image: -moz-linear-gradient(bottom, rgb(235,146,146) 100%, rgb(209,90,90) 0%);
+    background-image: -webkit-linear-gradient(bottom, rgb(235,146,146) 100%, rgb(209,90,90) 0%);
+    background-image: -ms-linear-gradient(bottom, rgb(235,146,146) 100%, rgb(209,90,90) 0%);
+
+    background-image: -webkit-gradient(
+        linear,
+        left bottom,
+        left top,
+        color-stop(1, rgb(235,146,146)),
+        color-stop(0, rgb(209,90,90))
+    );
 }
 
 button {
