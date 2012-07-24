@@ -51,6 +51,9 @@
             </ul>
         </li>
         <li>
+            <a href="/acl_managers/">Acl</a>
+        </li>
+        <li>
             <a href="/users/logout/">Logga ut</a>
         </li>
     </ul>

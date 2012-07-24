@@ -29,8 +29,9 @@ class UsersController extends AppController {
      */
     public function beforeFilter() {
         parent::beforeFilter();
-        $this->Auth->allow('logout');
+        $this->Auth->allow('login');
         $this->Auth->allow('add');
+        $this->Auth->allow('logout');
     }
 
     /**
@@ -55,7 +56,7 @@ class UsersController extends AppController {
             return;
         }
 
-        if ($this->Session->read('Auth.User') || $this->Auth->login()) {
+        if ($this->Auth->login()) {
             $this->redirect($this->Auth->redirect());
         }
         else {
@@ -114,6 +115,7 @@ class UsersController extends AppController {
             $this->User->create();
             $this->request->data['User']['group_id'] = 
                 $this->RegisterKey->getGroup($key);
+
             if ($this->User->save($this->request->data)) {
                 $this->RegisterKey->useKey($key);
                 $this->redirect(array('action' => 'index'));
