@@ -71,7 +71,23 @@ input[type=submit] {
     background-image: -ms-linear-gradient(top, #e97171, #d14545);
     background-image: -o-linear-gradient(top, #e97171, #d14545);
     background-image: linear-gradient(top, #e97171, #d14545);
+}
+
+input[type=submit]:hover {
+    background-color: #d15a5a;
+    background-image: linear-gradient(bottom, #EB9292 100%, #D15A5A 0%);
+    background-image: -o-linear-gradient(bottom, #EB9292 100%, #D15A5A 0%);
+    background-image: -moz-linear-gradient(bottom, #EB9292 100%, #D15A5A 0%);
+    background-image: -webkit-linear-gradient(bottom, #EB9292 100%, #D15A5A 0%);
+    background-image: -ms-linear-gradient(bottom, #EB9292 100%, #D15A5A 0%);
     
+    background-image: -webkit-gradient(
+        linear,
+    	left bottom,
+    	left top,
+    	color-stop(1, #EB9292),
+    	color-stop(0, #D15A5A)
+    );
 }
 
 button {
@@ -82,6 +98,23 @@ button {
     background-image: -ms-linear-gradient(top, #999, #666);
     background-image: -o-linear-gradient(top, #999, #666);
     background-image: linear-gradient(top, #999, #666);
+}
+
+button:hover {
+    background-color:#8B8B8B;
+    background-image: linear-gradient(bottom, #BBB 100%, #888 0%);
+    background-image: -o-linear-gradient(bottom, #BBB 100%, #888 0%);
+    background-image: -moz-linear-gradient(bottom, #BBB 100%, #888 0%);
+    background-image: -webkit-linear-gradient(bottom, #BBB 100%, #888 0%);
+    background-image: -ms-linear-gradient(bottom, #BBB 100%, #888 0%);
+    
+    background-image: -webkit-gradient(
+        linear,
+    	left bottom,
+    	left top,
+    	color-stop(1, #BBB),
+    	color-stop(0, #888)
+    );
 }
 
 table td {
