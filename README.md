@@ -37,3 +37,15 @@ Ställ om tabbar i Notepad++
 Inställningar > Inställningar > Programspråksmeny
 
 I nedre höger kant finns det en checkbox "Ersätt med mellanslag", kryssa i den. Ovanför kan du också välja "Flikstorlek" (hur många mellanslag på en tab), välj 4.
+
+Ställ om tabbar i Sublime Text 2
+---------------------------
+Preferences -> Settings - Default
+
+Denna är som standard 4 så det behöver man nog inte ändra på, men se till att det är 4.
+// The number of spaces a tab is considered equal to
+"tab_size": 4,
+
+Denna är som standard satt till false så ändra den till true.
+// Set to true to insert spaces when tab is pressed
+"translate_tabs_to_spaces": true,
